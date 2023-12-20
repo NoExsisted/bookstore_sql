@@ -1,9 +1,9 @@
 import jwt
 import time
 import logging
-import sqlite3 as sqlite
 from be.model import error
 from be.model import db_conn
+import pymysql
 
 # encode a json string like:
 #   {
@@ -19,7 +19,7 @@ def jwt_encode(user_id: str, terminal: str) -> str:
         key=user_id,
         algorithm="HS256",
     )
-    return encoded.decode("utf-8")
+    return encoded
 
 
 # decode a JWT to a json string like:
@@ -54,21 +54,25 @@ class User(db_conn.DBConn):
             return False
 
     def register(self, user_id: str, password: str):
+        cursor = None
         try:
             terminal = "terminal_{}".format(str(time.time()))
             token = jwt_encode(user_id, terminal)
-            self.conn.execute(
+            cursor = self.conn.cursor()
+            cursor.execute(
                 "INSERT into user(user_id, password, balance, token, terminal) "
-                "VALUES (?, ?, ?, ?, ?);",
+                "VALUES (%s, %s, %s, %s, %s);",
                 (user_id, password, 0, token, terminal),
             )
             self.conn.commit()
-        except sqlite.Error:
+        except pymysql.Error as e:
+            print(e.args[0], e.args[1])
             return error.error_exist_user_id(user_id)
         return 200, "ok"
 
     def check_token(self, user_id: str, token: str) -> (int, str):
-        cursor = self.conn.execute("SELECT token from user where user_id=?", (user_id,))
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT token from user where user_id = %s;", (user_id,))
         row = cursor.fetchone()
         if row is None:
             return error.error_authorization_fail()
@@ -78,10 +82,12 @@ class User(db_conn.DBConn):
         return 200, "ok"
 
     def check_password(self, user_id: str, password: str) -> (int, str):
-        cursor = self.conn.execute(
-            "SELECT password from user where user_id=?", (user_id,)
+        cursor = self.conn.cursor()
+        cursor.execute(
+            "SELECT password from user where user_id=%s;", (user_id,)
         )
         row = cursor.fetchone()
+        print(row)
         if row is None:
             return error.error_authorization_fail()
 
@@ -91,21 +97,22 @@ class User(db_conn.DBConn):
         return 200, "ok"
 
     def login(self, user_id: str, password: str, terminal: str) -> (int, str, str):
-        token = ""
+        cursor = None
         try:
             code, message = self.check_password(user_id, password)
             if code != 200:
                 return code, message, ""
 
             token = jwt_encode(user_id, terminal)
-            cursor = self.conn.execute(
-                "UPDATE user set token= ? , terminal = ? where user_id = ?",
+            cursor = self.conn.cursor()
+            cursor.execute(
+                "UPDATE user set token= %s , terminal = %s where user_id = %s;",
                 (token, terminal, user_id),
             )
             if cursor.rowcount == 0:
                 return error.error_authorization_fail() + ("",)
             self.conn.commit()
-        except sqlite.Error as e:
+        except pymysql.Error as e:
             return 528, "{}".format(str(e)), ""
         except BaseException as e:
             return 530, "{}".format(str(e)), ""
@@ -120,32 +127,35 @@ class User(db_conn.DBConn):
             terminal = "terminal_{}".format(str(time.time()))
             dummy_token = jwt_encode(user_id, terminal)
 
-            cursor = self.conn.execute(
-                "UPDATE user SET token = ?, terminal = ? WHERE user_id=?",
+            cursor = self.conn.cursor()
+            cursor.execute(
+                "UPDATE user SET token = %s, terminal = %s WHERE user_id=%s;",
                 (dummy_token, terminal, user_id),
             )
             if cursor.rowcount == 0:
                 return error.error_authorization_fail()
 
             self.conn.commit()
-        except sqlite.Error as e:
+        except pymysql.Error as e:
             return 528, "{}".format(str(e))
         except BaseException as e:
             return 530, "{}".format(str(e))
         return 200, "ok"
 
     def unregister(self, user_id: str, password: str) -> (int, str):
+        cursor = None
         try:
             code, message = self.check_password(user_id, password)
             if code != 200:
                 return code, message
 
-            cursor = self.conn.execute("DELETE from user where user_id=?", (user_id,))
+            cursor = self.conn.cursor()
+            cursor.execute("DELETE from user where user_id=%s", (user_id,))
             if cursor.rowcount == 1:
                 self.conn.commit()
             else:
                 return error.error_authorization_fail()
-        except sqlite.Error as e:
+        except pymysql.Error as e:
             return 528, "{}".format(str(e))
         except BaseException as e:
             return 530, "{}".format(str(e))
@@ -161,15 +171,16 @@ class User(db_conn.DBConn):
 
             terminal = "terminal_{}".format(str(time.time()))
             token = jwt_encode(user_id, terminal)
-            cursor = self.conn.execute(
-                "UPDATE user set password = ?, token= ? , terminal = ? where user_id = ?",
+            cursor = self.conn.cursor()
+            cursor.execute(
+                "UPDATE user set password = %s, token= %s , terminal = %s where user_id = %s",
                 (new_password, token, terminal, user_id),
             )
             if cursor.rowcount == 0:
                 return error.error_authorization_fail()
 
             self.conn.commit()
-        except sqlite.Error as e:
+        except pymysql.Error as e:
             return 528, "{}".format(str(e))
         except BaseException as e:
             return 530, "{}".format(str(e))

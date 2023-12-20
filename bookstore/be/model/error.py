@@ -9,12 +9,12 @@ error_code = {
     517: "stock level low, book id {}",
     518: "invalid order id {}",
     519: "not sufficient funds, order id {}",
-    520: "",
-    521: "",
-    522: "",
-    523: "",
-    524: "",
-    525: "",
+    520: "book status error",
+    521: "book has not paid yet",
+    522: "book has sent",
+    523: "book has not sent",
+    524: "book has received",
+    525: "no eligible book",
     526: "",
     527: "",
     528: "",
@@ -57,9 +57,34 @@ def error_not_sufficient_funds(order_id):
     return 519, error_code[518].format(order_id)
 
 
+def error_book_status():
+    return 520, error_code[520]
+
+
+def error_no_eligible_book():
+    return 525, error_code[525]
+
+
 def error_authorization_fail():
     return 401, error_code[401]
 
 
 def error_and_message(code, message):
     return code, message
+
+'''
+def error_not_paid_book():
+    return 520, error_code[520]
+
+
+def error_book_has_sent():
+    return 521, error_code[521]
+
+
+def error_book_has_not_sent():
+    return 522, error_code[522]
+
+
+def error_book_has_received():
+    return 523, error_code[523]
+'''

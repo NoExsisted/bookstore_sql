@@ -1,0 +1,783 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 59, in register
+    token = jwt_encode(user_id, terminal)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 22, in jwt_encode
+    return encoded.decode("utf-8")
+AttributeError: 'str' object has no attribute 'decode'
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2023 20:54:17] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 59, in register
+    token = jwt_encode(user_id, terminal)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 22, in jwt_encode
+    return encoded.decode("utf-8")
+AttributeError: 'str' object has no attribute 'decode'
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2023 20:54:17] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 59, in register
+    token = jwt_encode(user_id, terminal)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 22, in jwt_encode
+    return encoded.decode("utf-8")
+AttributeError: 'str' object has no attribute 'decode'
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2023 20:54:17] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2023 20:54:17] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 60, in register
+    token = jwt_encode(user_id, terminal)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 23, in jwt_encode
+    return encoded.decode("utf-8")
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 71, in register
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:47:47] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 60, in register
+    token = jwt_encode(user_id, terminal)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 23, in jwt_encode
+    return encoded.decode("utf-8")
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 71, in register
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:47:47] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 60, in register
+    token = jwt_encode(user_id, terminal)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 23, in jwt_encode
+    return encoded.decode("utf-8")
+AttributeError: 'str' object has no attribute 'decode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 71, in register
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:47:47] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:47:47] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 08:56:04] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:31] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/unregister HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[31m[1mPOST /auth/unregister HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[31m[1mPOST /auth/unregister HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:07:32] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:10:30] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:10:30] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:10:30] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:10:30] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:44:03] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:44:03] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:44:03] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 10:44:03] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:27:43] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:29:13] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:30:27] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:31:02] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:31:02] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:32:45] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:34:07] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:34:54] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:38:26] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:40:09] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 11:42:08] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:01] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:01] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:01] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:01] "GET /shutdown HTTP/1.1" 200 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:28] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:29] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:29] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:01:29] "GET /shutdown HTTP/1.1" 200 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:15] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:15] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:15] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:15] "GET /shutdown HTTP/1.1" 200 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:43] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:43] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:43] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:02:43] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:03:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:03:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:03:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:03:44] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:12] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:12] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:12] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:12] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:41] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:44] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:44] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:44] "[31m[1mPOST /auth/logout HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:05:44] "POST /auth/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:06:05] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:06:11] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:06:19] "POST /auth/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:06:25] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:06:26] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:07:04] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:07:27] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:07:47] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:25] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:27] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:27] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:27] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:27] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:27] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:25:27] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:31:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:31:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:31:44] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:31:44] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:04] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:04] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:04] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:04] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:32] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:32] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:32] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:32] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:32] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:32] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:52] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:53] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:53] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:53] "[31m[1mPOST /auth/password HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:53] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:32:53] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:34:20] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:36:18] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:36:59] "[35m[1mPOST /auth/register HTTP/1.1[0m" 512 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 12:55:23] "GET /shutdown HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 70, in register
+    str1 = e.args[0] + '&&' + e.args[1]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 13:06:08] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 13:06:46] "GET /shutdown HTTP/1.1" 200 -
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 65, in register
+    (user_id, password, 0, token, terminal),
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 558, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 822, in _read_query_result
+    result.read()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 1200, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\connections.py", line 772, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'token' at row 1")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\model\user.py", line 70, in register
+    str1 = str(e.args[0]) + '&&' + e.args[1]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 13:07:04] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+ValueError: too many values to unpack (expected 2)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 13:08:01] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+ValueError: too many values to unpack (expected 2)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 13:09:20] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:be.serve:Exception on /auth/register [POST]
+Traceback (most recent call last):
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lianxiang\Desktop\bookstore\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\lianxiang\Desktop\bookstore\be\view\auth.py", line 35, in register
+    code, message = u.register(user_id=user_id, password=password)
+ValueError: too many values to unpack (expected 2)
+INFO:werkzeug:127.0.0.1 - - [12/Dec/2023 13:10:17] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
