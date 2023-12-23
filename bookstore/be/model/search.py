@@ -10,7 +10,6 @@ class Search(db_conn.DBConn):
 
     # store_id 0 表示全局搜索，其他表示店铺 id
     def search_books(self, store_id, search_query, search_scopes) -> (int, str):
-        # 在查询有的情况下，分为两种情况：
         # 1. 有条件有范围
         # 2. 没条件有范围（相当于没条件没范围，比如范围是tags，那么还是返回所有书本）
         # 3. 没条件没范围
@@ -20,6 +19,7 @@ class Search(db_conn.DBConn):
             query = ""
             choice = []
             if search_query:
+                #choice = search_scopes
                 if 'title' in search_scopes:
                     query += "title LIKE %s OR "
                     choice.append(f"%{search_query}%")
@@ -45,48 +45,57 @@ class Search(db_conn.DBConn):
                 if not search_scopes:
                     query = "title LIKE %s OR author LIKE %s OR tags LIKE %s OR content LIKE %s OR book_intro LIKE %s"
                     choice = [f"%{search_query}%" for _ in range(5)]
+                    #choice = ["title", "author", "tags", "content", "book_int]
 
                 # 获取总结果数
                 if store_id != 0:  # 在店铺范围内搜索
                     choice.append(store_id)
-                    cursor.execute(f"SELECT COUNT(*) from book where {query} and store_id = %s;", tuple(choice))
+                    cursor.execute(f"SELECT COUNT(*) from store where {query} and store_id = %s;", tuple(choice))
+                    '''choice_ = ', '.join(choice)
+                    sql_query = (
+                            "SELECT COUNT(*) from store WHERE MATCH(" + choice_ + ") AGAINST (%s) "
+                            "and store_id = %s;"
+                    )
+                    cursor.execute(sql_query, (search_query, store_id,))'''
                     total = cursor.fetchone()[0]
 
-                    cursor.execute(f"SELECT title from book where {query} and store_id = %s;", tuple(choice))
+                    cursor.execute(f"SELECT title from store where {query} and store_id = %s;", tuple(choice))
+                    '''sql_query = (
+                            "SELECT title from store WHERE MATCH(" + choice_ + ") AGAINST (%s) "
+                            "and store_id = %s;"
+                    )
+                    cursor.execute(sql_query, (search_query, store_id,))'''
                     book_titles = [book[0] for book in cursor.fetchall()]
+                    #print(book_titles)
                 else:  # 全局搜索
-                    cursor.execute(f"SELECT COUNT(*) from book where {query}", tuple(choice))
+                    #choice_ = ', '.join(choice)
+                    '''sql_query = (
+                            "SELECT COUNT(*) from store WHERE MATCH(" + choice_ + ") AGAINST (%s);"
+                    )
+                    print(sql_query)
+                    cursor.execute(sql_query, (search_query,))'''
+                    cursor.execute(f"SELECT COUNT(*) from store where {query}", tuple(choice))
                     total = cursor.fetchone()[0]
+                    #print("total:", total)
 
-                    cursor.execute(f"SELECT title from book where {query}", tuple(choice))
+                    cursor.execute(f"SELECT title from store where {query}", tuple(choice))
+                    '''cursor.execute(
+                        "SELECT title from store WHERE MATCH(" + choice_ + ") AGAINST (%s);",
+                        (search_query,)
+                    )'''
                     book_titles = [book[0] for book in cursor.fetchall()]
             else:
-                '''
-                if store_id != 0:  # 在店铺范围内搜索
-                    choice.append(store_id)
-                    cursor.execute(f"SELECT COUNT(*) from book where {query} and store_id = %s;", tuple(choice))
-                    total = cursor.fetchone()[0]
-
-                    cursor.execute(f"SELECT title from book where {query} and store_id = %s;", tuple(choice))
-                    book_titles = [book[0] for book in cursor.fetchall()]
-                else:  # 全局搜索
-                    cursor.execute(f"SELECT COUNT(*) from book where {query}", tuple(choice))
-                    total = cursor.fetchone()[0]
-
-                    cursor.execute(f"SELECT title from book where {query}", tuple(choice))
-                    book_titles = [book[0] for book in cursor.fetchall()]
-                '''
                 if store_id != 0:
-                    cursor.execute(f"SELECT COUNT(*) from book where store_id = %s", (store_id,))
+                    cursor.execute(f"SELECT COUNT(*) from store where store_id = %s", (store_id,))
                     total = cursor.fetchone()[0]
 
-                    cursor.execute(f"SELECT title from book where store_id = %s", (store_id,))
+                    cursor.execute(f"SELECT title from store where store_id = %s", (store_id,))
                     book_titles = [book[0] for book in cursor.fetchall()]
                 else:
-                    cursor.execute(f"SELECT COUNT(*) from book")
+                    cursor.execute(f"SELECT COUNT(*) from store")
                     total = cursor.fetchone()[0]
 
-                    cursor.execute(f"SELECT title from book")
+                    cursor.execute(f"SELECT title from store")
                     book_titles = [book[0] for book in cursor.fetchall()]
 
             self.conn.commit()
@@ -112,7 +121,8 @@ class Search(db_conn.DBConn):
 
         except pymysql.Error as e:
             traceback.print_exc()
-            print(e.args[0], e.args[1])
+            #print(e.args[0], e.args[1])
             return 528, "{}".format(str(e))
         except BaseException as e:
+            traceback.print_exc()
             return 530, "{}".format(str(e))

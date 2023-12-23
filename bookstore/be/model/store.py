@@ -34,7 +34,10 @@ class Store:
             cursor.execute(
                 "CREATE TABLE IF NOT EXISTS store( "
                 "store_id VARCHAR(255), book_id VARCHAR(255), book_info MEDIUMTEXT, stock_level INTEGER,"
-                " PRIMARY KEY(store_id, book_id));"
+                " title VARCHAR(255), author VARCHAR(255),"
+                " book_intro TEXT, content TEXT,tags VARCHAR(255),"
+                " PRIMARY KEY(store_id, book_id), "
+                "FULLTEXT(title, author, book_intro, content, tags));"
             )
 
             cursor.execute(
@@ -47,7 +50,6 @@ class Store:
                 "binding VARCHAR(255), isbn VARCHAR(255),"
                 "author_intro TEXT, book_intro TEXT, content TEXT,"
                 "tags VARCHAR(255), picture MEDIUMBLOB);"
-                #"stock_level INTEGER);"
             )
 
             cursor.execute(
@@ -75,7 +77,7 @@ class Store:
             logging.error(e)
             conn.rollback()
 
-    def get_db_conn(self) -> pymysql.Connection:
+    def get_db_conn(self) -> str:
         return self.database
 
 
